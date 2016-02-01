@@ -1,0 +1,19 @@
+---
+title: "Documentation for the Coursera Data Product Project: Car Fuel Efficiency Explanatory Analysis, Modeling and Prediction"
+author: "chenm"
+date: "Sunday, January 31, 2016"
+output: html_document
+---
+# Background
+This project use the fuel efficiency dataset from the AppliedPredictiveModeling. The originl source of the data set is <http://fueleconomy.gov>.  It lists different estimates of fuel economy for passenger cars and trucks. For each vehicle, various characteristics are recorded such as the engine displacement or number of cylinders. Along with these values, laboratory measurements are made for the city and highway miles per gallon (MPG) of the car. Predictors extracted from the website include: EngDispl, NumCyl, Transmission, AirAspirationMethod,NumGears, TransLockup, TransCreeperGear, DriveDesc, IntakeValvePerCyl, ExhaustValvesPerCyl, CarlineClassDesc, VarValveTiming and VarValveLift. The outcome used in the book is in column
+FE and is the unadjusted highway data
+
+# Model Selection
+Seveal rounds of feature selections have been done to filter highly correlated items, remove nonsignificant factors and lastly remove high VIF factor. The remaining features are sorted by the VIF, from lowest to highest. 
+
+# Interactive User inputs and reactive charts
+Twe interactive charts are developed. The first chart is the correlation study between the FE and indivial feature, which is selected by the user from the dynamic drop down list. This chart will give user a  tool for explanatory study of the impact. 
+The second interactive chart allows user to select the number of predictors (features) to be used for the modeling. Once user select the number, the same number of features with lowest VIF will be selected for the modelinbg. The chart will display relationship between the actual fuel economy and the predicted fuel economy.
+Another interactive feature on the second chart will allow user to input the value of individual predictor, and the predicted fuel economy will be displayed on the chart. 
+
+
